@@ -1,0 +1,20 @@
+{
+  "name": "bs-electron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bs-platform": "^1.7.1",
+    "electron": "^1.6.5"
+  },
+  "scripts": {
+    "start": "bsb -make-world -w",
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Michael McDermott <michael@mgmcdermott.com> (http://mgmcdermott.com/)",
+  "license": "ISC",
+  "description": ""
+}
