@@ -93,7 +93,8 @@ type commandLine = {
   appendArgument: value::string => unit
 };
 
-type browserWindow;
+/* type browserWindow = options::browserWindowOptions => browserWindowInstance; */
+type browserWindowInstance = {id: int};
 
 type menuItem;
 
@@ -109,10 +110,10 @@ type popupOptions = {
 
 type menuInstance = {
   append: menuItem::menuItem => unit,
-  closePopup: browserWindow::option browserWindow => unit,
+  closePopup: browserWindow::option browserWindowInstance => unit,
   insert: pos::int => menuItem::menuItem => unit,
   items: array menuItem,
-  popup: browserWindow::option browserWindow => options::popupOptions => unit
+  popup: browserWindow::option browserWindowInstance => options::popupOptions => unit
 };
 
 /* Can also be a string */
