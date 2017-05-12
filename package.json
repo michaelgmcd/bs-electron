@@ -4,11 +4,12 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "bs-platform": "^1.7.1",
-    "electron": "^1.6.5"
+    "bs-platform": "^1.7.3",
+    "electron": "^1.7.0"
   },
   "scripts": {
     "start": "bsb -make-world -w",
+    "example": "cp example/index.html lib/js/example/index.html && npm run build && electron lib/js/example/main.js",
     "build": "bsb -make-world",
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1"

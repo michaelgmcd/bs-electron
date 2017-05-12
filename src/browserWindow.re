@@ -103,6 +103,10 @@ type config = {
   webPreferences: option webPreferences
 };
 
-external make : config => instance = "BrowserWindow" [@@bs.module "electron"] [@@bs.new];
+external make : 'a => instance = "BrowserWindow" [@@bs.module "electron"] [@@bs.new];
+
+external on : instance => string => (unit => unit) => unit = "on" [@@bs.send];
+
+external loadURL : instance => string => unit = "loadURL" [@@bs.send];
 /* TODO: Add EventEmitter */
 /* TODO: Finish */

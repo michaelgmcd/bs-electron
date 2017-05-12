@@ -1,4 +1,4 @@
 # bs-electron
 Bucklescript types for electron.
 
-Note that this project is still a work in progress.
+**Please note** that this project is still a work in progress.

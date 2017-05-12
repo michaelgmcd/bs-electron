@@ -79,11 +79,11 @@ type t;
 
 type arrString = array string;
 
-external t : t = "app" [@@bs.module "electron"];
+external on : t => string => (unit => unit) => unit = "on" [@@bs.send];
 
-external _addRecentDocument : t => string => unit = "addRecentDocument" [@@bs.send];
+external addRecentDocument : t => string => unit = "addRecentDocument" [@@bs.send];
 
-external _clearRecentDocuments : t => unit = "clearRecentDocuments" [@@bs.send];
+external clearRecentDocuments : t => unit = "clearRecentDocuments" [@@bs.send];
 
 module CommandLine = {
   type t;
@@ -184,7 +184,7 @@ external makeSingleInstance :
   t => callback::(argv::array string => workingDirectory::string => unit) => bool =
   "makeSingleInstance" [@@bs.send];
 
-external quit : t => unit => unit = "quit" [@@bs.send];
+external quit : t => unit = "quit" [@@bs.send];
 
 type relaunchOptions = {args: option arrString, execPath: option string};
 
